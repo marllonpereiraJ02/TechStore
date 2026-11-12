@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="TechStore Logo" width="150">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="cadastro.html" class="ativo">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="form-container">
+            <h2>Crie a sua Conta na TechStore</h2>
+            <p>Preencha os seus dados para ter acesso a ofertas exclusivas e acompanhar os seus pedidos.</p>
+
+            <form action="#" method="POST" class="form-cadastro">
+                
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+
+                    <div class="campo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    </div>
+
+                    <div class="campo-duplo">
+                        <div class="campo">
+                            <label for="cpf">CPF / CNPJ:</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone / WhatsApp:</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="data_nascimento">Data de Nascimento:</label>
+                        <input type="date" id="data_nascimento" name="data_nascimento" required>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Segurança da Conta</legend>
+
+                    <div class="campo-duplo">
+                        <div class="campo">
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha" name="senha" minlength="8" placeholder="Mínimo de 8 caracteres" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="confirma_senha">Confirmar Senha:</label>
+                            <input type="password" id="confirma_senha" name="confirma_senha" minlength="8" placeholder="Repita a sua senha" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="campo-checkbox">
+                    <input type="checkbox" id="termos" name="termos" required>
+                    <label for="termos">Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a>.</label>
+                </div>
+
+                <div class="campo-checkbox">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    <label for="newsletter">Desejo receber promoções e novidades da TechStore por e-mail.</label>
+                </div>
+
+                <button type="submit" class="btn-enviar">Concluir Cadastro</button>
+            </form>
+
+            <p class="link-redirecionamento">
+                Já possui uma conta? <a href="login.html">Faça login aqui</a>.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore - Equipamentos Audiovisuais. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="#" class="btn-topo" id="btnTopo" aria-label="Voltar ao topo"><span>&#8593;</span></a>
+    <script>
+        const btnTopo = document.getElementById("btnTopo");
+        window.addEventListener("scroll", () => {
+            btnTopo.classList.toggle("visivel", window.scrollY > 300);
+        });
+    </script>
+
+</body>
+</html>

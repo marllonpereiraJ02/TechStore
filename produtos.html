@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Produtos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="TechStore Logo" width="150">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html" class="ativo">Produtos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal-dji">
+        
+        <!-- Sidebar de Filtros Lateral (Estilo DJI) -->
+        <aside class="sidebar-filtros">
+            <div class="bloco-filtro">
+                <h3>Faixas de preço</h3>
+                <div class="inputs-preco">
+                    <input type="text" value="210,00" placeholder="Mínimo">
+                    <input type="text" value="12.500,00" placeholder="Máximo">
+                    <button type="button" class="btn-filtrar-preco">&gt;</button>
+                </div>
+            </div>
+
+            <div class="bloco-filtro">
+                <h3>Categoria</h3>
+                <div class="tags-categorias">
+                    <button type="button" class="tag-pill ativo">Todas</button>
+                    <button type="button" class="tag-pill">Câmaras</button>
+                    <button type="button" class="tag-pill">Lentes</button>
+                    <button type="button" class="tag-pill">Áudio</button>
+                    <button type="button" class="tag-pill">Iluminação</button>
+                    <button type="button" class="tag-pill">Estabilização</button>
+                    <button type="button" class="tag-pill">Kits</button>
+                    <button type="button" class="tag-pill">Acessórios</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Área Principal de Produtos -->
+        <section class="area-produtos">
+            <div class="header-produtos">
+                <span class="contagem-produtos" id="contagem"></span>
+                <div class="ordenacao">
+                    <label for="ordenar">Ordenar Por:</label>
+                    <select id="ordenar">
+                        <option>Relevância</option>
+                        <option>Menor Preço</option>
+                        <option>Maior Preço</option>
+                        <option>Código (PROD)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grelha-produtos-dji">
+                
+                <!-- PROD001 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <span class="badge-lancamento">Lançamento</span>
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera.jpg" alt="Câmera Mirrorless compacta">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD001</small>
+                        <h4 class="titulo-produto">Camera Mirrorless Compacta 4K</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 4.200,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 350,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD002 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-nikon-dslr.jpg" alt="Câmara Nikon DSLR Profissional">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD002</small>
+                        <h4 class="titulo-produto">Camera Nikon DSLR Profissional</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 5.100,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 425,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD003 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-sony-tamron.jpg" alt="Câmara Sony com Objetiva Tamron">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD003</small>
+                        <h4 class="titulo-produto">Camera Sony Full Frame com Lente Tamron</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 8.900,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 741,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD004 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-vintage.jpg" alt="Câmara Fotográfica Vintage de Coleção">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD004</small>
+                        <h4 class="titulo-produto">Camera Fotografica Analogica Vintage</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.800,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 150,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD005 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-35mm.jpg" alt="Lente Prime 35mm f/1.8">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD005</small>
+                        <h4 class="titulo-produto">Lente Prime 35mm f/1.8 para Retratos</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 2.100,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 175,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD006 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-nikon.jpg" alt="Lente Zoom Nikon">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD006</small>
+                        <h4 class="titulo-produto">Lente Zoom Nikon DX 18-105mm</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.950,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 162,50</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD007 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-teleobjetiva.jpg" alt="Lente Teleobjetiva Zoom">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD007</small>
+                        <h4 class="titulo-produto">Lente Teleobjetiva Zoom 70-300mm</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 3.400,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 283,33</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD008 -->
+                <article class="card-dji" data-categoria="Iluminação">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/flash-speedlite-godox.jpg" alt="Flash Speedlite Godox">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD008</small>
+                        <h4 class="titulo-produto">Flash Speedlite Godox TTL para Camera</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 780,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 65,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD009 -->
+                <article class="card-dji" data-categoria="Iluminação">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/kit-iluminacao-estudio.jpg" alt="Kit de Iluminação para Estúdio Softbox">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD009</small>
+                        <h4 class="titulo-produto">Kit Iluminacao de Estudio com Softbox e Tripe</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.290,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 107,50</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD010 -->
+                <article class="card-dji" data-categoria="Kits">
+                    <span class="badge-lancamento">Destaque</span>
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/kit-cameras-estudio.jpg" alt="Kit de Câmeras de Estúdio">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD010</small>
+                        <h4 class="titulo-produto">Kit Multi-Camera para Transmissao de Estudio</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 12.500,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 1.041,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD011 -->
+                <article class="card-dji" data-categoria="Kits">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/kit-videomaker.jpg" alt="Kit Videomaker Completo">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD011</small>
+                        <h4 class="titulo-produto">Kit Videomaker Completo com Acessorios</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 6.800,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 566,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD012 -->
+                <article class="card-dji" data-categoria="Kits">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/kit-videomaker-gravador.jpg" alt="Kit Videomaker com Gravador de Áudio">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD012</small>
+                        <h4 class="titulo-produto">Kit Videomaker Pro com Gravador de Audio Externo</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 8.200,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 683,33</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD013 -->
+                <article class="card-dji" data-categoria="Áudio">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/microfone-shotgun.jpg" alt="Microfone Shotgun Direcional">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD013</small>
+                        <h4 class="titulo-produto">Microfone Shotgun Direcional para Camera</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 390,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 32,50</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD014 -->
+                <article class="card-dji" data-categoria="Áudio">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/microfone-shotgun-rode.jpg" alt="Microfone Shotgun Rode">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD014</small>
+                        <h4 class="titulo-produto">Microfone Shotgun Rode Videomic Pro</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 850,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 70,83</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD015 -->
+                <article class="card-dji" data-categoria="Estabilização">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/monope-profissional.jpg" alt="Monopé Profissional para Vídeo">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD015</small>
+                        <h4 class="titulo-produto">Monope Profissional em Aluminio com Pe Fluido</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 580,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 48,33</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD016 -->
+                <article class="card-dji" data-categoria="Estabilização">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/gimbal-mobile.jpg" alt="Gimbal Estabilizador para Smartphone">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD016</small>
+                        <h4 class="titulo-produto">Gimbal Estabilizador de 3 Eixos para Smartphone</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 620,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 51,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD017 -->
+                <article class="card-dji" data-categoria="Estabilização">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/gimbal.jpg" alt="Gimbal Estabilizador Portátil">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD017</small>
+                        <h4 class="titulo-produto">Gimbal Estabilizador Compacto para Camera</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 2.400,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 200,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD018 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/equipamento-fotografia-flatlay.jpg" alt="Kit de Acessórios Fotográficos">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD018</small>
+                        <h4 class="titulo-produto">Kit de Acessorios Fotograficos e Limpeza de Oticas</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 210,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 17,50</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD019 -->
+                <article class="card-dji" data-categoria="Áudio">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/microfone-shotgun-deadcat.jpg" alt="Microfone Shotgun com corta-vento deadcat">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD019</small>
+                        <h4 class="titulo-produto">Microfone Shotgun com Corta-Vento Deadcat</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 490,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 40,83</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD020 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/rig-camera-monitor.jpg" alt="Rig de câmara com pega superior e monitor">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD020</small>
+                        <h4 class="titulo-produto">Rig de Camera com Pega Superior e Monitor</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.250,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 104,16</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD021 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-canon-flash-difusor.jpg" alt="Câmara Canon com flash Godox e difusor">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD021</small>
+                        <h4 class="titulo-produto">Camera Canon com Flash Speedlite Godox e Difusor</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 5.600,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 466,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD022 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-teleobjetiva-prof.jpg" alt="Lente teleobjetiva profissional com para-sol">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD022</small>
+                        <h4 class="titulo-produto">Lente Teleobjetiva Profissional com Para-sol</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 4.800,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 400,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD023 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-canon-24-70mm.jpg" alt="Lente Canon 24-70mm série L com para-sol">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD023</small>
+                        <h4 class="titulo-produto">Lente Canon 24-70mm f/2.8L USM com Para-sol</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 6.200,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 516,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD024 -->
+                <article class="card-dji" data-categoria="Lentes">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/lente-canon-estojo-protecao.jpg" alt="Lente Canon série L com estojo">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD024</small>
+                        <h4 class="titulo-produto">Lente Canon Série L com Para-sol e Estojo</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 6.500,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 541,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD025 -->
+                <article class="card-dji" data-categoria="Áudio">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/microfone-lapela-sem-fio-duplo.jpg" alt="Kit de microfones de lapela sem fio duplos">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD025</small>
+                        <h4 class="titulo-produto">Kit Microfone de Lapela Sem Fio Duplo com Estojo</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.150,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 95,83</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD026 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-canon-eos.jpg" alt="Câmara Mirrorless Canon EOS">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD026</small>
+                        <h4 class="titulo-produto">Camera Mirrorless Canon EOS com Objetiva</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 5.800,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 483,33</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD027 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/carregador-e-bateria-canon.jpg" alt="Carregador de bateria e bateria Canon LP-E17">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD027</small>
+                        <h4 class="titulo-produto">Carregador de Bateria com Bateria Canon LP-E17</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 350,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 29,16</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD028 -->
+                <article class="card-dji" data-categoria="Iluminação">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/bastao-led-rgb.jpg" alt="Bastão de luz LED RGB portátil para iluminação">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD028</small>
+                        <h4 class="titulo-produto">Bastao de Luz LED RGB Portatil para Video e Estudio</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 450,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 37,50</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD029 -->
+                <article class="card-dji" data-categoria="Estabilização">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/gimbal-estabilizador-3-eixos.jpg" alt="Gimbal estabilizador de 3 eixos para câmara">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD029</small>
+                        <h4 class="titulo-produto">Gimbal Estabilizador Eletronico de 3 Eixos</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 3.800,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 316,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD030 -->
+                <article class="card-dji" data-categoria="Estabilização">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/tripe-cabeca-hidraulica.jpg" alt="Tripé profissional de vídeo com cabeça hidráulica">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD030</small>
+                        <h4 class="titulo-produto">Tripe Profissional com Cabeca Hidraulica</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.450,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 120,83</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD031 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/cartao-memoria-sdxc-128gb.jpg" alt="Cartão de memória SDXC 128GB">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD031</small>
+                        <h4 class="titulo-produto">Cartao de Memoria SDXC 128GB UHS-II 300MB/s</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 520,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 43,33</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD032 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/ssd-portatil-1tb-externo.jpg" alt="SSD portátil externo de 1TB">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD032</small>
+                        <h4 class="titulo-produto">SSD Portatil Externo 1TB USB-C de Alta Velocidade</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 890,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 74,16</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD033 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/filtro-nd-variavel-77mm.jpg" alt="Filtro ND variável 77mm">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD033</small>
+                        <h4 class="titulo-produto">Filtro ND Variavel 77mm ND2-ND400 para Lentes</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 380,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 31,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD034 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <span class="badge-lancamento">Novo</span>
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/drone-filmagem-4k-gimbal.jpg" alt="Drone de filmagem 4K dobrável">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD034</small>
+                        <h4 class="titulo-produto">Drone de Filmagem 4K Dobravel com Gimbal</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 6.900,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 575,00</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD035 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/monitor-campo-externo-7pol.jpg" alt="Monitor de campo externo 7 polegadas">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD035</small>
+                        <h4 class="titulo-produto">Monitor de Campo Externo 7" Ultra Bright 4K HDMI</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 1.850,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 154,16</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD036 -->
+                <article class="card-dji" data-categoria="Acessórios">
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/mochila-fotografica-impermeavel.jpg" alt="Mochila fotográfica impermeável">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD036</small>
+                        <h4 class="titulo-produto">Mochila Fotografica Impermeavel com Divisorias</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 620,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 51,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+                <!-- PROD037 -->
+                <article class="card-dji" data-categoria="Câmaras">
+                    <span class="badge-lancamento">Pop</span>
+                    <button class="btn-favorito" type="button" aria-label="Favoritar">&#9825;</button>
+                    <div class="card-imagem">
+                        <img src="img/camera-360-graus.jpg" alt="Câmara de ação panorâmica 360 graus">
+                    </div>
+                    <div class="card-acoes">
+                        <button class="btn-comprar-pill" type="button"><span class="icone-carrinho">&#128722;</span> Comprar</button>
+                    </div>
+                    <div class="card-info">
+                        <small class="codigo-prod">PROD037</small>
+                        <h4 class="titulo-produto">Camera de Acao 360 Panoramica 5.7K Impermeavel</h4>
+                        <div class="bloco-preco">
+                            <span class="preco-vista">R$ 3.200,00</span>
+                            <span class="preco-parcelado">ou 12x de R$ 266,66</span>
+                        </div>
+                        <div class="frete-gratis"><span class="icone-camiao">&#128666;</span> Frete Grátis</div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore - Equipamentos Audiovisuais. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="#" class="btn-topo" id="btnTopo" aria-label="Voltar ao topo"><span>&#8593;</span></a>
+    <script>
+        const btnTopo = document.getElementById("btnTopo");
+        window.addEventListener("scroll", () => {
+            btnTopo.classList.toggle("visivel", window.scrollY > 300);
+        });
+    </script>
+
+    <script src="js/produtos.js"></script>
+</body>
+</html>

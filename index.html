@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Equipamentos Audiovisuais Profissionais</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="TechStore Logo" width="150">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="ativo">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="quem-somos.html">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo" class="conteudo">
+        <section class="banner-home">
+            <img src="img/banner-home.jpg" alt="Equipamentos Audiovisuais TechStore" width="500">
+            <div class="banner-texto">
+                <h2>Tecnologia de Ponta para Fotógrafos e Videomakers</h2>
+                <p>As melhores câmaras, lentes, iluminação e sistemas de áudio com garantia e entrega rápida.</p>
+                <a href="produtos.html" class="btn-destaque">Explorar Catálogo</a>
+            </div>
+        </section>
+
+        <section class="secao-destaques">
+            <h2>Categorias em Destaque</h2>
+            <div class="grid-categorias">
+                <div class="card-categoria">
+                    <img src="img/camera-sony-tamron.jpg" alt="Câmaras Profissionais" width="300">
+                    <h3>Câmaras & Objetivas</h3>
+                    <p>Equipamentos full frame e mirrorless para produções de alto nível.</p>
+                    <a href="produtos.html">Ver Produtos &rarr;</a>
+                </div>
+                <div class="card-categoria">
+                    <img src="img/bastao-led-rgb.jpg" alt="Iluminação LED" width="300">
+                    <h3>Iluminação & Estúdio</h3>
+                    <p>Painéis LED, bastões RGB e kits de softbox para qualquer cenário.</p>
+                    <a href="produtos.html">Ver Produtos &rarr;</a>
+                </div>
+                <div class="card-categoria">
+                    <img src="img/microfone-lapela-sem-fio-duplo.jpg" alt="Áudio Profissional" width="300">
+                    <h3>Áudio & Microfones</h3>
+                    <p>Sistemas de lapela sem fio, shotguns e gravadores dedicados.</p>
+                    <a href="produtos.html">Ver Produtos &rarr;</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore - Equipamentos Audiovisuais. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="#" class="btn-topo" id="btnTopo" aria-label="Voltar ao topo"><span>&#8593;</span></a>
+    <script>
+        const btnTopo = document.getElementById("btnTopo");
+        window.addEventListener("scroll", () => {
+            btnTopo.classList.toggle("visivel", window.scrollY > 300);
+        });
+    </script>
+
+</body>
+</html>

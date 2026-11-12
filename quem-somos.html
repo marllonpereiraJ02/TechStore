@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Quem Somos</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="TechStore Logo" width="150">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="quem-somos.html" class="ativo">Quem Somos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="quem-somos-container">
+            <div class="quem-somos-imagem">
+                <img src="img/empresa.jpg" alt="Instalações da TechStore" width="400">
+            </div>
+            <div class="quem-somos-texto">
+                <h2>Sobre a TechStore</h2>
+                <p>Fundada por especialistas do setor audiovisual, a <strong>TechStore</strong> nasceu com a missão de fornecer soluções completas e de alta performance para produtores de conteúdo, fotógrafos, cineastas e estúdios de transmissão.</p>
+                
+                <h3>A Nossa Missão</h3>
+                <p>Oferecer o melhor em tecnologia de imagem e som, garantindo a curadoria técnica de produtos originais com o suporte de profissionais altamente qualificados.</p>
+
+                <h3>Porquê Escolher a TechStore?</h3>
+                <ul>
+                    <li>✔ Atendimento especializado por técnicos do setor audiovisual.</li>
+                    <li>✔ Produtos originais com garantia do fabricante.</li>
+                    <li>✔ Entrega rápida e embalagens com proteção reforçada.</li>
+                    <li>✔ Suporte técnico pós-venda garantido.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechStore - Equipamentos Audiovisuais. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="#" class="btn-topo" id="btnTopo" aria-label="Voltar ao topo"><span>&#8593;</span></a>
+    <script>
+        const btnTopo = document.getElementById("btnTopo");
+        window.addEventListener("scroll", () => {
+            btnTopo.classList.toggle("visivel", window.scrollY > 300);
+        });
+    </script>
+
+</body>
+</html>
